@@ -17,7 +17,14 @@ class Pessoa{
     }
         return "Olá meu nome é "+this.nome+" e tenho "+this.idade + " anos " + msgHabilitacao + " .";
     }
+    comidasFavoritas(){
+        console.log("Minhas(s) comidas(s) favorita(s)");
+        for(let i=0; i< this.comidas.length; i++ ){
+            console.log(this.comidas[i]);
+        }
+    }
 }
 
 let pessoa1 = new Pessoa("João", 17, ["doguinho", "macarrão", ]);
 console.log(pessoa1.cumprimentar());
+console.log(pessoa1.comidasFavoritas());
