@@ -2,7 +2,7 @@ class Cachorro{
     nome: string;
     raca: string;
     idade: number;
-    name: string;
+    
     
     constructor(nome: string, raca: string, idade: number)
     {
