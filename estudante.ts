@@ -27,5 +27,5 @@ class Estudante{
     }
 }
 
-let estudante = new Estudante("Maria", 20, [10, 10, 10, 10, 10])
+let estudante = new Estudante("Maria", 20, [8, 7.5, 9.2, 6.8, 9.5])
 console.log(estudante.maiorquesete());
