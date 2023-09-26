@@ -1,5 +1,5 @@
 abstract class Funcionario2{
-    private nome: string;
+    protected nome: string;
     protected salario: number;
 
     constructor(nome: string, salario: number){
