@@ -69,6 +69,43 @@ class Poupanca extends ContaBanco {
         return 1;
     }
 }
+class Conta {
+    constructor() {
+        this.saldo = 0;
+    }
+    depositar(valor) {
+        this.saldo += valor;
+    }
+    sacar(valor) {
+        if (valor <= this.saldo) {
+            this.saldo -= valor;
+        }
+        else {
+            console.log("Saldo insuficiente.");
+        }
+    }
+    consultarSaldo() {
+        return this.saldo;
+    }
+}
+class ContaPoupanca extends Conta {
+    constructor() {
+        super();
+    }
+    investir(valor, prazoMeses, taxaJuros) {
+        const rendimento = valor * taxaJuros * prazoMeses;
+        this.depositar(rendimento);
+    }
+}
+class ContaInvestimento extends Conta {
+    constructor() {
+        super();
+    }
+    investir(valor, prazoMeses, taxaJuros) {
+        const rendimento = valor * taxaJuros * prazoMeses * 0.8; // Considerando uma taxa de administração de 20%
+        this.depositar(rendimento);
+    }
+}
 const contaCorrente = new Corrente(10000);
 contaCorrente.apresentar();
 console.log(contaCorrente.saldoAtual());
